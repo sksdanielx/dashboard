@@ -34,7 +34,7 @@ export class BarchartComponent implements OnInit {
   ];
 
   constructor(private northSvc: NorthwindService) {
-
+    this.fetchDimensions();
   }
 
   dimension$: Observable<any>;
@@ -58,6 +58,10 @@ export class BarchartComponent implements OnInit {
 
   dimension_OnClear($event) {
 
+  }
+
+  fetchDimensions() {
+    this.dimension$ = this.northSvc.getDimensions();
   }
 
   // events

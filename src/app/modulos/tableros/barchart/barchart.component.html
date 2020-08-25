@@ -1,10 +1,14 @@
 <div>
     <div>
 
-        <ng-select [items]="dimensions$ | async" , [searcheable]="true" bidlabel="descripcion" placeHolder="Dimensión"
+        <ng-select [items]="dimension$ | async" [searchable]="true" bindLabel="descripcion" placeHolder="Dimensión"
             [clearable]="true" (change)="dimension_OnChange($event)" (clear)="dimension_OnClear($event)"
             [(ngModel)]="dimensionSelected">
         </ng-select>
+
+        <pre>
+            {{ dimensionSelected | json }}
+        </pre>
 
         <div style="display: block">
             <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"

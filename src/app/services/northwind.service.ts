@@ -15,4 +15,8 @@ export class NorthwindService {
     return this.http.get(`${URL_BASE}/TopN/${topN}/${dimension}/${order}`);
   }
 
+  getDimensions() {
+    //console.log('assets/json/dimensions.json')
+    return this.http.get('assets/json/dimensions.json');
+  }
 }
