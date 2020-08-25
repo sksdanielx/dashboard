@@ -1,0 +1,16 @@
+<div>
+    <div>
+
+        <ng-select [items]="dimensions$ | async" , [searcheable]="true" bidlabel="descripcion" placeHolder="Dimensión"
+            [clearable]="true" (change)="dimension_OnChange($event)" (clear)="dimension_OnClear($event)"
+            [(ngModel)]="dimensionSelected">
+        </ng-select>
+
+        <div style="display: block">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+            </canvas>
+        </div>
+        <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+    </div>
+</div>

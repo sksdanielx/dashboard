@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ENDPOINTS: {
+    NORTHWIND: {
+      urlBase: 'http://192.168.50.3//API.MTW301/api/northwind/v1'
+    }
+  }
 };
 
 /*
