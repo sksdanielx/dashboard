@@ -12,6 +12,6 @@
     {
         "codigo": 3,
         "descripcion": "Empleado",
-        "valor": "[DIM Empleado].[Dim Empleado Nombre]"
+        "valor": "[DIM Empleado].[Dim Empleado Full Name]"
     }
 ]
